@@ -1,5 +1,6 @@
 "use client";
 import { MongoClient } from "mongodb";
+import Head from "next/head";
 
 import { useState } from "react";
 import PilotsList from "../../components/find-pilots/PilotsList";
@@ -27,22 +28,31 @@ const FindPilots = (props) => {
   };
   return (
     <>
-      <h1 className="">Find FPV Pilots</h1>
-      <div className="flex justify-center">
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-3"
-          onClick={displayPilotsHandler}
-        >
-          Browse pilots
-        </button>
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-3"
-          onClick={postJobHandler}
-        >
-          Post a job
-        </button>
-      </div>
-      <div>{displayContent}</div>
+      <Head>
+        <title>Find FPV Pilots</title>
+        <meta
+          name="description"
+          content="Search for the best pilots in FPV industry by posting a job or browsing through the list of pilots"
+        />
+      </Head>
+      <main>
+        <h1 className="">Find FPV Pilots</h1>
+        <div className="flex justify-center">
+          <button
+            className="m-3 rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700"
+            onClick={displayPilotsHandler}
+          >
+            Browse pilots
+          </button>
+          <button
+            className="m-3 rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700"
+            onClick={postJobHandler}
+          >
+            Post a job
+          </button>
+        </div>
+        <div>{displayContent}</div>
+      </main>
     </>
   );
 };

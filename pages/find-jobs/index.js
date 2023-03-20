@@ -1,9 +1,10 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+import Head from "next/head";
 import JobsList from "../../components/find-jobs/JobsList";
 import CreatePilotProfileForm from "../../components/find-jobs/CreatePilotProfileForm";
 import Card from "../../components/ui/Card";
-import { useRouter } from "next/navigation";
 
 const FindJobs = () => {
   const router = useRouter();
@@ -33,22 +34,31 @@ const FindJobs = () => {
   };
   return (
     <>
-      <h1 className="">Find Jobs</h1>
-      <div className="flex justify-center">
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-3"
-          onClick={displayJobsHandler}
-        >
-          Browse jobs
-        </button>
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-3"
-          onClick={createProfileHandler}
-        >
-          Create a profile
-        </button>
-      </div>
-      <div>{displayContent}</div>
+      <Head>
+        <title>Find FPV Jobs</title>
+        <meta
+          name="description"
+          content="Search for FPV jobs. Create a pilot profile or browsing through the list of FPV jobs"
+        />
+      </Head>
+      <main>
+        <h1 className="">Find Jobs</h1>
+        <div className="flex justify-center">
+          <button
+            className="m-3 rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700"
+            onClick={displayJobsHandler}
+          >
+            Browse jobs
+          </button>
+          <button
+            className="m-3 rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700"
+            onClick={createProfileHandler}
+          >
+            Create a profile
+          </button>
+        </div>
+        <div>{displayContent}</div>
+      </main>
     </>
   );
 };
