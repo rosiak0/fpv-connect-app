@@ -1,6 +1,6 @@
 const Card = (props) => {
   return (
-    <div className="container-md m-auto w-96 pt-2 bg-white rounded-lg shadow-md">
+    <div className="max-w-sm m-auto overflow-hidden rounded-xl bg-white shadow-md ">
       {props.children}
     </div>
   );

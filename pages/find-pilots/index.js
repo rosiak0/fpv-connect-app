@@ -1,4 +1,6 @@
 "use client";
+import { MongoClient } from "mongodb";
+
 import { useState } from "react";
 import PilotsList from "../../components/find-pilots/PilotsList";
 import PostJobsForm from "../../components/find-pilots/PostJobsForm";
@@ -64,10 +66,10 @@ export const getStaticProps = async () => {
     props: {
       pilots: pilots.map((pilot) => ({
         id: pilot._id.toString(),
-        title: pilot.title,
-        image: pilot.image,
-        address: pilot.address,
-        description: pilot.description,
+        name: pilot.name,
+        surname: pilot.surname,
+        nickname: pilot.nickname,
+        location: pilot.location,
       })),
     },
     revalidate: 10,

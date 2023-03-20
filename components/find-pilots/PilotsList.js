@@ -2,7 +2,7 @@ import PilotItem from "./PilotItem";
 
 function PilotList(props) {
   return (
-    <ul className="">
+    <ul>
       {props.pilots.map((pilot) => (
         <PilotItem
           key={pilot.id}
