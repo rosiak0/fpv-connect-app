@@ -20,13 +20,13 @@ export default function Home(props) {
         <div className="flex justify-center">
           <button className="m-3 w-screen rounded bg-blue-500 bg-opacity-50 py-2 px-4 font-bold text-white hover:bg-blue-700">
             <Link href="/find-pilots">
-              <h4>FIND FPV PILOTS</h4>
+              <h4>FIND PILOTS</h4>
               <p>I need to hire.</p>
             </Link>
           </button>
           <button className="m-3 w-screen rounded bg-blue-500 bg-opacity-50 py-2 px-4 font-bold text-white hover:bg-blue-700">
             <Link href="/find-jobs">
-              <h4>FIND FPV JOBS </h4>
+              <h4>FIND JOBS </h4>
               <p>I want to get hired.</p>
             </Link>
           </button>

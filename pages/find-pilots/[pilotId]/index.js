@@ -19,6 +19,11 @@ const PilotDetails = (props) => {
         surname={props.pilotData.surname}
         nickname={props.pilotData.nickname}
         location={props.pilotData.location}
+        email={props.pilotData.email}
+        instagram={props.pilotData.instagram}
+        youtube={props.pilotData.youtube}
+        video={props.pilotData.video}
+        photo={props.pilotData.photo}
       />
     </>
   );
@@ -75,6 +80,11 @@ export const getStaticProps = async (context) => {
         surname: selectedPilot.surname,
         nickname: selectedPilot.nickname,
         location: selectedPilot.location,
+        email: selectedPilot.email,
+        instagram: selectedPilot.instagram,
+        youtube: selectedPilot.youtube,
+        video: selectedPilot.video,
+        photo: selectedPilot.photo,
       },
     },
     revalidate: 10,

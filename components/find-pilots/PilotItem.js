@@ -11,12 +11,28 @@ function PilotItem(props) {
   };
 
   return (
-    <li className="my-5">
+    <li className="m-5 ">
       <ListCard>
-        <div className="block  justify-self-center p-3 text-gray-800">
+        <div>
+          <img className="h-40 w-40 " src={props.photo} alt={props.nickname} />
+        </div>
+        {/* <div className="  block justify-self-center  text-gray-800">
+          <iframe
+            className="mx-auto"
+            width="100%x"
+            height="203px"
+            src={props.video.replace("/watch?v=", "/embed/")}
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div> */}
+        <div className=" text-gray-900">
           <h3>{props.nickname}</h3>
           <address>{props.location}</address>
         </div>
+
         <div>
           <button
             onClick={showDetailsHandler}
