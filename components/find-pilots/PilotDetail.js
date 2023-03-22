@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const PilotDetail = (props) => {
   return (
-    <section className="m-auto max-w-fit overflow-hidden rounded-xl bg-gray-900 shadow-md">
+    <section className="mx-auto max-w-fit overflow-hidden rounded-xl bg-gray-900 pt-24 shadow-md">
       <iframe
         className=" aspect-video"
         width="640px"

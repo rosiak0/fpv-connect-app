@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const MainNavigation = () => {
   return (
-    <header className="bg-gray-900 flex justify-between p-5">
+    <header className="absolute z-50 flex w-full justify-between bg-gray-900 p-8">
       <Link className="mx-3" href="/">
         FPV CONNECT
       </Link>
@@ -13,6 +13,12 @@ const MainNavigation = () => {
           </li>
           <li className="mx-3">
             <Link href="/find-jobs">Find Jobs</Link>
+          </li>
+          <li className="mx-3">
+            <Link href="">SIGN IN</Link>
+          </li>
+          <li className="mx-3">
+            <Link href="">JOIN</Link>
           </li>
         </ul>
       </nav>

@@ -41,7 +41,12 @@ const FindJobs = () => {
           content="Search for FPV jobs. Create a pilot profile or browsing through the list of FPV jobs"
         />
       </Head>
-      <main>
+      <img
+        className="absolute z-10 h-auto w-full overflow-hidden "
+        src="./jobs.jpg"
+        alt="Picture of an fpv pilot wearing DJI goggles"
+      />
+      <main className="relative z-30 pt-24">
         <h1 className="">Find Jobs</h1>
         <div className="flex justify-center">
           <button
