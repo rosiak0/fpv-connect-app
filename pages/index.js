@@ -11,13 +11,8 @@ export default function Home() {
           content="Find the fpv pilot you need for your next project!"
         />
       </Head>
-      <div className="">
-        <video
-          autoPlay
-          loop
-          muted
-          className="absolute z-10 min-h-full w-auto min-w-full max-w-none"
-        >
+      <div className="absolute z-10 h-full w-auto min-w-full max-w-none overflow-hidden">
+        <video autoPlay loop muted className="w-full">
           <source src="./videoBg.mp4" type="video/mp4" />
         </video>
       </div>
@@ -27,7 +22,7 @@ export default function Home() {
           We make it easy to find and hire qualified FPV drone pilots for film,
           video and live event realization
         </p>
-        <div className="flex justify-center  pt-96 ">
+        <div className="flex justify-center  pt-64 ">
           <button className="hover: m-3 w-96 rounded bg-blue-500 bg-opacity-30 py-2 px-4 font-bold text-white hover:scale-105 hover:bg-blue-500 hover:bg-opacity-80 hover:shadow-xl">
             <Link href="/find-pilots">
               <h4>FIND PILOTS</h4>

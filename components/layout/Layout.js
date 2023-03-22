@@ -5,7 +5,7 @@ const Layout = (props) => {
     <>
       <div>
         <MainNavigation />
-        <main className="h-screen">{props.children}</main>
+        <main className="">{props.children}</main>
       </div>
     </>
   );
