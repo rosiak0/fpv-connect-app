@@ -5,7 +5,7 @@ const Layout = (props) => {
     <>
       <div>
         <MainNavigation />
-        <main className="h-screen px-10 py-44">{props.children}</main>
+        <main className="h-screen">{props.children}</main>
       </div>
     </>
   );

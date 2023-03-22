@@ -122,6 +122,7 @@ const CreatePilotProfileForm = (props) => {
           <input
             className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none"
             type="url"
+            required
             id="instagram"
             ref={instagramInputRef}
           ></input>
@@ -136,6 +137,7 @@ const CreatePilotProfileForm = (props) => {
           <input
             className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none"
             type="url"
+            required
             id="youtube"
             ref={youtubeInputRef}
           ></input>
@@ -147,6 +149,7 @@ const CreatePilotProfileForm = (props) => {
           <input
             className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none"
             type="url"
+            required
             id="video"
             ref={videoInputRef}
           ></input>
@@ -158,6 +161,7 @@ const CreatePilotProfileForm = (props) => {
           <input
             className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none"
             type="url"
+            required
             id="photo"
             ref={photoInputRef}
           ></input>
