@@ -11,15 +11,16 @@ export default function Home() {
           content="Find the fpv pilot you need for your next project!"
         />
       </Head>
-      <video
-        autoPlay
-        loop
-        muted
-        className="absolute z-10 min-h-full w-auto min-w-full max-w-none"
-      >
-        <source src="./videoBg.mp4" type="video/mp4" />
-      </video>
-
+      <div className="">
+        <video
+          autoPlay
+          loop
+          muted
+          className="absolute z-10 min-h-full w-auto min-w-full max-w-none"
+        >
+          <source src="./videoBg.mp4" type="video/mp4" />
+        </video>
+      </div>
       <main className="relative z-30 p-40  text-white">
         <h1>YOUR FILM AND VIDEO PRODUCTION PARTNER</h1>
         <p>
