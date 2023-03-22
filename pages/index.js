@@ -21,9 +21,9 @@ export default function Home() {
           <source src="./videoBg.mp4" type="video/mp4" />
         </video>
       </div>
-      <main className="relative z-30 p-40  text-white">
-        <h1>YOUR FILM AND VIDEO PRODUCTION PARTNER</h1>
-        <p>
+      <main className="relative z-30 py-40  text-white">
+        <h1 className="p-10 text-xl">YOUR FILM AND VIDEO PRODUCTION PARTNER</h1>
+        <p className="p-10 text-lg">
           We make it easy to find and hire qualified FPV drone pilots for film,
           video and live event realization
         </p>
