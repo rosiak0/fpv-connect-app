@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const MainNavigation = () => {
   return (
-    <header className="absolute z-50 flex w-full justify-between bg-gray-900 p-8">
+    <header className="absolute z-50 flex w-full justify-between bg-gray-900 p-4">
       <Link className="mx-3" href="/">
         FPV CONNECT
       </Link>

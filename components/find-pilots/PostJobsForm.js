@@ -6,6 +6,7 @@ const PostJobsForm = (props) => {
   const descriptionInputRef = useRef();
   const locationInputRef = useRef();
   const companyInputRef = useRef();
+  const emailInputRef = useRef();
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -14,12 +15,14 @@ const PostJobsForm = (props) => {
     const enteredDescription = descriptionInputRef.current.value;
     const enteredLocation = locationInputRef.current.value;
     const enteredCompany = companyInputRef.current.value;
+    const enteredEmail = emailInputRef.current.value;
 
     const jobData = {
       title: enteredTitle,
       description: enteredDescription,
       location: enteredLocation,
       company: enteredCompany,
+      email: enteredEmail,
     };
 
     props.onAddJob(jobData);
@@ -29,11 +32,11 @@ const PostJobsForm = (props) => {
     <Card>
       <form className="m-5" onSubmit={submitHandler}>
         <div>
-          <label className="block text-gray-700 font-bold mb-2" htmlFor="title">
+          <label className="mb-2 block font-bold text-gray-700" htmlFor="title">
             Title
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none"
             type="text"
             required
             id="title"
@@ -42,13 +45,13 @@ const PostJobsForm = (props) => {
         </div>
         <div>
           <label
-            className="block text-gray-700 font-bold mb-2"
+            className="mb-2 block font-bold text-gray-700"
             htmlFor="company"
           >
             Company
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none"
             type="text"
             required
             id="company"
@@ -56,32 +59,16 @@ const PostJobsForm = (props) => {
           ></input>
         </div>
         <div>
-          <label
-            className="block text-gray-700 font-bold mb-2"
-            htmlFor="description"
-          >
-            Description
-          </label>
-          <textarea
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            type="text"
-            defaultValue="Describe the task"
-            required
-            id="description"
-            ref={descriptionInputRef}
-          ></textarea>
-        </div>
-        <div>
           {/* Add a map! */}
           <label
-            className="block text-gray-700 font-bold mb-2"
+            className="mb-2 block font-bold text-gray-700"
             htmlFor="location"
           >
             Location
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 
-            leading-tight focus:outline-none focus:shadow-outline"
+            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight 
+            text-gray-700 shadow focus:outline-none"
             type="text"
             required
             id="location"
@@ -89,7 +76,37 @@ const PostJobsForm = (props) => {
           ></input>
         </div>
         <div>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">
+          <label
+            className="mb-2 block font-bold text-gray-700"
+            htmlFor="description"
+          >
+            Description
+          </label>
+          <textarea
+            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none"
+            type="text"
+            defaultValue="Describe the task"
+            required
+            id="description"
+            ref={descriptionInputRef}
+          ></textarea>
+        </div>
+
+        <div>
+          <label className="mb-2 block font-bold text-gray-700" htmlFor="email">
+            Email
+          </label>
+          <input
+            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight 
+            text-gray-700 shadow focus:outline-none"
+            type="email"
+            required
+            id="email"
+            ref={emailInputRef}
+          ></input>
+        </div>
+        <div>
+          <button className="my-3 rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700">
             Post a job
           </button>
         </div>

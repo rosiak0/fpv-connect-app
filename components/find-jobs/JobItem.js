@@ -3,24 +3,21 @@
 import { useRouter } from "next/navigation";
 import ListCard from "../ui/ListCard";
 
-function PilotItem(props) {
+function JobItem(props) {
   const router = useRouter();
 
   const showDetailsHandler = () => {
-    router.push("/find-pilots/" + props.id);
+    router.push("/find-jobs/" + props.id);
   };
 
   return (
     <li className="m-5 w-40">
       <ListCard>
         <div>
-          <img className="h-40 w-40 " src={props.photo} alt={props.nickname} />
+          <h1>{props.title}</h1>
+          <h3>{props.company}</h3>
+          <p>{props.location}</p>
         </div>
-        <div className=" text-gray-900">
-          <h3>{props.nickname}</h3>
-          <address>{props.location}</address>
-        </div>
-
         <div>
           <button
             onClick={showDetailsHandler}
@@ -34,4 +31,4 @@ function PilotItem(props) {
   );
 }
 
-export default PilotItem;
+export default JobItem;

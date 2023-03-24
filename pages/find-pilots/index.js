@@ -1,19 +1,29 @@
 "use client";
 import { MongoClient } from "mongodb";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Head from "next/head";
 
-import { useState } from "react";
 import PilotsList from "../../components/find-pilots/PilotsList";
 import PostJobsForm from "../../components/find-pilots/PostJobsForm";
 import Card from "../../components/ui/Card";
 
 const FindPilots = (props) => {
+  const router = useRouter();
   const [displayContent, setDisplayContent] = useState(null);
 
-  const addJobHandler = (enteredJobData) => {
+  const addJobHandler = async (enteredJobData) => {
+    const response = await fetch("/api/new-job", {
+      method: "POST",
+      body: JSON.stringify(enteredJobData),
+      headers: { "Content-Type": "application/json" },
+    });
+    const data = await response.json();
+    console.log(data);
     alert(
       "Posted a job: " + enteredJobData.title + " in " + enteredJobData.location
     );
+    router.push("/");
   };
 
   const displayPilotsHandler = () => {
