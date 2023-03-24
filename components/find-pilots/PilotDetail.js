@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Button from "../ui/Button";
 
 const PilotDetail = (props) => {
   return (
@@ -36,9 +37,11 @@ const PilotDetail = (props) => {
           Send Email
         </a>
       </div>
-      <button className="m-3 rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700">
-        <Link href="/find-pilots">Return</Link>
-      </button>
+      <Button>
+        <button>
+          <Link href="/find-pilots">Return</Link>
+        </button>
+      </Button>
     </section>
   );
 };

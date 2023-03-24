@@ -7,6 +7,7 @@ import Head from "next/head";
 import JobsList from "../../components/find-jobs/JobsList";
 import CreatePilotProfileForm from "../../components/find-jobs/CreatePilotProfileForm";
 import Card from "../../components/ui/Card";
+import Button from "../../components/ui/Button";
 
 const FindJobs = (props) => {
   const router = useRouter();
@@ -51,18 +52,12 @@ const FindJobs = (props) => {
       <main className="relative z-30 pt-24">
         <h1 className="">Find Jobs</h1>
         <div className="flex justify-center">
-          <button
-            className="m-3 rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700"
-            onClick={displayJobsHandler}
-          >
-            Browse jobs
-          </button>
-          <button
-            className="m-3 rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700"
-            onClick={createProfileHandler}
-          >
-            Create a profile
-          </button>
+          <Button>
+            <button onClick={displayJobsHandler}>Browse jobs</button>
+          </Button>
+          <Button>
+            <button onClick={createProfileHandler}>Create a profile</button>
+          </Button>
         </div>
         <div>{displayContent}</div>
       </main>

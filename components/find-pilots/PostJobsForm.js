@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import Card from "../ui/Card";
+import Button from "../ui/Button";
 
 const PostJobsForm = (props) => {
   const titleInputRef = useRef();
@@ -105,11 +106,9 @@ const PostJobsForm = (props) => {
             ref={emailInputRef}
           ></input>
         </div>
-        <div>
-          <button className="my-3 rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700">
-            Post a job
-          </button>
-        </div>
+        <Button>
+          <button>Post a job</button>
+        </Button>
       </form>
     </Card>
   );

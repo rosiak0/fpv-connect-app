@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import Button from "../ui/Button";
 import ListCard from "../ui/ListCard";
 
 function JobItem(props) {
@@ -11,7 +12,7 @@ function JobItem(props) {
   };
 
   return (
-    <li className="m-5 w-40">
+    <li className="m-5 w-40 text-center text-black">
       <ListCard>
         <div>
           <h1>{props.title}</h1>
@@ -19,12 +20,9 @@ function JobItem(props) {
           <p>{props.location}</p>
         </div>
         <div>
-          <button
-            onClick={showDetailsHandler}
-            className="w-full rounded-b-md bg-blue-600  py-2 text-blue-100 duration-75 hover:bg-blue-500 hover:shadow-md"
-          >
-            Show Details
-          </button>
+          <Button>
+            <button onClick={showDetailsHandler}>Show Details</button>
+          </Button>
         </div>
       </ListCard>
     </li>

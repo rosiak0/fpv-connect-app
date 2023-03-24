@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import Button from "../ui/Button";
 import Card from "../ui/Card";
 
 const CreatePilotProfileForm = (props) => {
@@ -166,11 +167,9 @@ const CreatePilotProfileForm = (props) => {
             ref={photoInputRef}
           ></input>
         </div>
-        <div>
-          <button className="my-3 rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700">
-            Add a pilot
-          </button>
-        </div>
+        <Button>
+          <button>Add a pilot</button>
+        </Button>
       </form>
     </Card>
   );
