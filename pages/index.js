@@ -21,15 +21,15 @@ export default function Home() {
           </video>
         </div> */}
         <main>
-          <h1 className="py-10 text-5xl">
+          <h1 className="pb-10 text-5xl">
             YOUR FILM AND VIDEO PRODUCTION PARTNER
           </h1>
-          <p className="text-lg">
+          <p className="pb-20 text-lg">
             We make it easy to find and hire qualified FPV drone pilots for
             film, video and live event realization
           </p>
 
-          <div className="flex justify-center pt-52 ">
+          <div className="flex flex-wrap justify-center ">
             <div>
               <ButtonLarge>
                 <button>
