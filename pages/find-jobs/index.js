@@ -67,11 +67,7 @@ const FindJobs = (props) => {
           <div>{displayContent}</div>
         </main>
       </Content>
-      {/* <img
-        className="absolute z-10 h-auto w-full overflow-hidden "
-        src="./jobs.jpg"
-        alt="Picture of an fpv pilot wearing DJI goggles"
-      /> */}
+
     </>
   );
 };

@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 import ListButton from "../ui/ListButton";
 import ListCard from "../ui/ListCard";
@@ -16,7 +17,7 @@ function PilotItem(props) {
     <li className="mx-5 mb-10 w-56">
       <ListCard>
         <div>
-          <img
+          <Image
             className="h-full w-full "
             src={props.photo}
             alt={props.nickname}
