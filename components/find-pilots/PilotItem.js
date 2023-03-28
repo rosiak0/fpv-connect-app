@@ -17,7 +17,9 @@ function PilotItem(props) {
     <li className="mx-5 mb-10 w-56">
       <ListCard>
         <div>
-          <Image
+          <img
+            // width="100"
+            // height="100"
             className="h-full w-full "
             src={props.photo}
             alt={props.nickname}
