@@ -33,11 +33,11 @@ const PostJobsForm = (props) => {
     <Card>
       <form className="m-5" onSubmit={submitHandler}>
         <div>
-          <label className="mb-2 block font-bold text-gray-700" htmlFor="title">
+          <label className="mb-2 block font-bold" htmlFor="title">
             Title
           </label>
           <input
-            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none"
+            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
             type="text"
             required
             id="title"
@@ -45,14 +45,11 @@ const PostJobsForm = (props) => {
           ></input>
         </div>
         <div>
-          <label
-            className="mb-2 block font-bold text-gray-700"
-            htmlFor="company"
-          >
+          <label className="mb-2 block font-bold" htmlFor="company">
             Company
           </label>
           <input
-            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none"
+            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
             type="text"
             required
             id="company"
@@ -61,15 +58,12 @@ const PostJobsForm = (props) => {
         </div>
         <div>
           {/* Add a map! */}
-          <label
-            className="mb-2 block font-bold text-gray-700"
-            htmlFor="location"
-          >
+          <label className="mb-2 block font-bold" htmlFor="location">
             Location
           </label>
           <input
             className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight 
-            text-gray-700 shadow focus:outline-none"
+            text-mainbg shadow focus:outline-none"
             type="text"
             required
             id="location"
@@ -77,14 +71,11 @@ const PostJobsForm = (props) => {
           ></input>
         </div>
         <div>
-          <label
-            className="mb-2 block font-bold text-gray-700"
-            htmlFor="description"
-          >
+          <label className="mb-2 block font-bold" htmlFor="description">
             Description
           </label>
           <textarea
-            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none"
+            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
             type="text"
             defaultValue="Describe the task"
             required
@@ -94,12 +85,12 @@ const PostJobsForm = (props) => {
         </div>
 
         <div>
-          <label className="mb-2 block font-bold text-gray-700" htmlFor="email">
+          <label className="mb-2 block font-bold" htmlFor="email">
             Email
           </label>
           <input
             className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight 
-            text-gray-700 shadow focus:outline-none"
+            text-mainbg shadow focus:outline-none"
             type="email"
             required
             id="email"

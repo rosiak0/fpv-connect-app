@@ -49,7 +49,7 @@ const CreatePilotProfileForm = (props) => {
             Name:
           </label>
           <input
-            className="focus:shadow-outline text-gray-700 w-full appearance-none rounded border py-2 px-3 leading-tight shadow focus:outline-none"
+            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
             type="text"
             required
             id="name"
@@ -57,14 +57,11 @@ const CreatePilotProfileForm = (props) => {
           ></input>
         </div>
         <div>
-          <label
-            className="text-gray-700 mb-2 block font-bold"
-            htmlFor="surname"
-          >
+          <label className="mb-2 block font-bold " htmlFor="surname">
             Surname:
           </label>
           <input
-            className="focus:shadow-outline text-gray-700 w-full appearance-none rounded border py-2 px-3 leading-tight shadow focus:outline-none"
+            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
             type="text"
             required
             id="surname"
@@ -72,14 +69,11 @@ const CreatePilotProfileForm = (props) => {
           ></input>
         </div>
         <div>
-          <label
-            className="text-gray-700 mb-2 block font-bold"
-            htmlFor="nickname"
-          >
+          <label className="mb-2 block font-bold " htmlFor="nickname">
             Nickname:
           </label>
           <input
-            className="focus:shadow-outline text-gray-700 w-full appearance-none rounded border py-2 px-3 leading-tight shadow focus:outline-none"
+            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
             type="text"
             required
             id="nickname"
@@ -87,14 +81,11 @@ const CreatePilotProfileForm = (props) => {
           ></input>
         </div>
         <div>
-          <label
-            className="text-gray-700 mb-2 block font-bold"
-            htmlFor="location"
-          >
+          <label className="mb-2 block font-bold " htmlFor="location">
             Location:
           </label>
           <input
-            className="focus:shadow-outline text-gray-700 w-full appearance-none rounded border py-2 px-3 leading-tight shadow focus:outline-none"
+            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
             type="text"
             required
             id="location"
@@ -102,11 +93,11 @@ const CreatePilotProfileForm = (props) => {
           ></input>
         </div>
         <div>
-          <label className="text-gray-700 mb-2 block font-bold" htmlFor="email">
+          <label className="mb-2 block font-bold " htmlFor="email">
             Enter your email address:
           </label>
           <input
-            className="focus:shadow-outline text-gray-700 w-full appearance-none rounded border py-2 px-3 leading-tight shadow focus:outline-none"
+            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
             type="email"
             required
             id="email"
@@ -114,14 +105,11 @@ const CreatePilotProfileForm = (props) => {
           ></input>
         </div>
         <div>
-          <label
-            className="text-gray-700 mb-2 block font-bold"
-            htmlFor="instagram"
-          >
+          <label className="mb-2 block font-bold " htmlFor="instagram">
             Instagram profile:
           </label>
           <input
-            className="focus:shadow-outline text-gray-700 w-full appearance-none rounded border py-2 px-3 leading-tight shadow focus:outline-none"
+            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
             type="url"
             required
             id="instagram"
@@ -129,14 +117,11 @@ const CreatePilotProfileForm = (props) => {
           ></input>
         </div>
         <div>
-          <label
-            className="text-gray-700 mb-2 block font-bold"
-            htmlFor="youtube"
-          >
+          <label className="mb-2 block font-bold " htmlFor="youtube">
             Youtube channel:
           </label>
           <input
-            className="focus:shadow-outline text-gray-700 w-full appearance-none rounded border py-2 px-3 leading-tight shadow focus:outline-none"
+            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
             type="url"
             required
             id="youtube"
@@ -144,11 +129,11 @@ const CreatePilotProfileForm = (props) => {
           ></input>
         </div>
         <div>
-          <label className="text-gray-700 mb-2 block font-bold" htmlFor="video">
+          <label className="mb-2 block font-bold " htmlFor="video">
             Youtube video you want people to see
           </label>
           <input
-            className="focus:shadow-outline text-gray-700 w-full appearance-none rounded border py-2 px-3 leading-tight shadow focus:outline-none"
+            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
             type="url"
             required
             id="video"
@@ -156,11 +141,11 @@ const CreatePilotProfileForm = (props) => {
           ></input>
         </div>
         <div>
-          <label className="text-gray-700 mb-2 block font-bold" htmlFor="photo">
+          <label className="mb-2 block font-bold " htmlFor="photo">
             Your photo
           </label>
           <input
-            className="focus:shadow-outline text-gray-700 w-full appearance-none rounded border py-2 px-3 leading-tight shadow focus:outline-none"
+            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
             type="url"
             required
             id="photo"

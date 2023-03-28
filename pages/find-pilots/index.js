@@ -57,7 +57,7 @@ const FindPilots = (props) => {
           <h1 className="pb-10 text-4xl">
             GREAT PRODUCTIONS START WITH GREAT CREWS.
           </h1>
-          <p className="tex-lg pb-20">
+          <p className="pb-20 text-lg">
             Whether you need an operator for a day, a month or a full-time FPV
             pilot for your project, we're here to help you out.
           </p>
