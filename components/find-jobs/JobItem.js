@@ -1,7 +1,8 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import Button from "../ui/Button";
+import ListButton from "../ui/ListButton";
+
 import ListCard from "../ui/ListCard";
 
 function JobItem(props) {
@@ -12,7 +13,7 @@ function JobItem(props) {
   };
 
   return (
-    <li className="m-5 w-40 text-center text-black">
+    <li className="m-5 w-96 text-center">
       <ListCard>
         <div>
           <h1>{props.title}</h1>
@@ -20,9 +21,9 @@ function JobItem(props) {
           <p>{props.location}</p>
         </div>
         <div>
-          <Button>
+          <ListButton>
             <button onClick={showDetailsHandler}>Show Details</button>
-          </Button>
+          </ListButton>
         </div>
       </ListCard>
     </li>

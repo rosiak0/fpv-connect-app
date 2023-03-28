@@ -8,6 +8,7 @@ import JobsList from "../../components/find-jobs/JobsList";
 import CreatePilotProfileForm from "../../components/find-jobs/CreatePilotProfileForm";
 import Card from "../../components/ui/Card";
 import Button from "../../components/ui/Button";
+import Content from "../../components/ui/Content";
 
 const FindJobs = (props) => {
   const router = useRouter();
@@ -44,23 +45,29 @@ const FindJobs = (props) => {
           content="Search for FPV jobs. Create a pilot profile or browsing through the list of FPV jobs"
         />
       </Head>
-      <img
+      <Content>
+        <main className="">
+          <h1 className="pb-10 text-3xl">TAKE THE WORK OUT OF FINDING WORK.</h1>
+          <p className="pb-10">
+            We take the hassle out of job searching. Find work in film and video
+            production that meets your unique skill-set, anywhere at any time.
+          </p>
+          <div className="flex justify-center">
+            <Button>
+              <button onClick={displayJobsHandler}>Browse jobs</button>
+            </Button>
+            <Button>
+              <button onClick={createProfileHandler}>Create a profile</button>
+            </Button>
+          </div>
+          <div>{displayContent}</div>
+        </main>
+      </Content>
+      {/* <img
         className="absolute z-10 h-auto w-full overflow-hidden "
         src="./jobs.jpg"
         alt="Picture of an fpv pilot wearing DJI goggles"
-      />
-      <main className="relative z-30 pt-24">
-        <h1 className="">Find Jobs</h1>
-        <div className="flex justify-center">
-          <Button>
-            <button onClick={displayJobsHandler}>Browse jobs</button>
-          </Button>
-          <Button>
-            <button onClick={createProfileHandler}>Create a profile</button>
-          </Button>
-        </div>
-        <div>{displayContent}</div>
-      </main>
+      /> */}
     </>
   );
 };

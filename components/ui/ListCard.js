@@ -1,6 +1,6 @@
 const ListCard = (props) => {
   return (
-    <div className="max-w-sm m-auto overflow-hidden rounded-xl bg-white shadow-md duration-200 hover:scale-105 hover:shadow-xl">
+    <div className="overflow-hidden rounded-xl bg-mainbg pt-10 shadow-md duration-200 hover:scale-105 hover:shadow-xl">
       {props.children}
     </div>
   );

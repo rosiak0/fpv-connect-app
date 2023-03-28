@@ -3,9 +3,9 @@ import MainNavigation from "./MainNavigation";
 const Layout = (props) => {
   return (
     <>
-      <div>
+      <div className="bg-mainbg">
         <MainNavigation />
-        <main className="">{props.children}</main>
+        <main>{props.children}</main>
       </div>
     </>
   );
