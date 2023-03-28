@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import Card from "../ui/Card";
 import Button from "../ui/Button";
 
 const PostJobsForm = (props) => {
@@ -30,78 +29,76 @@ const PostJobsForm = (props) => {
   };
 
   return (
-    <Card>
-      <form className="m-5" onSubmit={submitHandler}>
-        <div>
-          <label className="mb-2 block font-bold" htmlFor="title">
-            Title
-          </label>
-          <input
-            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
-            type="text"
-            required
-            id="title"
-            ref={titleInputRef}
-          ></input>
-        </div>
-        <div>
-          <label className="mb-2 block font-bold" htmlFor="company">
-            Company
-          </label>
-          <input
-            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
-            type="text"
-            required
-            id="company"
-            ref={companyInputRef}
-          ></input>
-        </div>
-        <div>
-          {/* Add a map! */}
-          <label className="mb-2 block font-bold" htmlFor="location">
-            Location
-          </label>
-          <input
-            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight 
+    <form className="m-5" onSubmit={submitHandler}>
+      <div>
+        <label className="mb-2 block font-bold" htmlFor="title">
+          Title
+        </label>
+        <input
+          className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
+          type="text"
+          required
+          id="title"
+          ref={titleInputRef}
+        ></input>
+      </div>
+      <div>
+        <label className="mb-2 block font-bold" htmlFor="company">
+          Company
+        </label>
+        <input
+          className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
+          type="text"
+          required
+          id="company"
+          ref={companyInputRef}
+        ></input>
+      </div>
+      <div>
+        {/* Add a map! */}
+        <label className="mb-2 block font-bold" htmlFor="location">
+          Location
+        </label>
+        <input
+          className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight 
             text-mainbg shadow focus:outline-none"
-            type="text"
-            required
-            id="location"
-            ref={locationInputRef}
-          ></input>
-        </div>
-        <div>
-          <label className="mb-2 block font-bold" htmlFor="description">
-            Description
-          </label>
-          <textarea
-            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
-            type="text"
-            defaultValue="Describe the task"
-            required
-            id="description"
-            ref={descriptionInputRef}
-          ></textarea>
-        </div>
+          type="text"
+          required
+          id="location"
+          ref={locationInputRef}
+        ></input>
+      </div>
+      <div>
+        <label className="mb-2 block font-bold" htmlFor="description">
+          Description
+        </label>
+        <textarea
+          className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
+          type="text"
+          defaultValue="Describe the task"
+          required
+          id="description"
+          ref={descriptionInputRef}
+        ></textarea>
+      </div>
 
-        <div>
-          <label className="mb-2 block font-bold" htmlFor="email">
-            Email
-          </label>
-          <input
-            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight 
+      <div>
+        <label className="mb-2 block font-bold" htmlFor="email">
+          Email
+        </label>
+        <input
+          className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight 
             text-mainbg shadow focus:outline-none"
-            type="email"
-            required
-            id="email"
-            ref={emailInputRef}
-          ></input>
-        </div>
-        <Button>
-          <button>Post a job</button>
-        </Button>
-      </form>
-    </Card>
+          type="email"
+          required
+          id="email"
+          ref={emailInputRef}
+        ></input>
+      </div>
+      <Button>
+        <button>Post a job</button>
+      </Button>
+    </form>
   );
 };
 

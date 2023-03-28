@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import Button from "../ui/Button";
-import Card from "../ui/Card";
 
 const CreatePilotProfileForm = (props) => {
   const nameInputRef = useRef();
@@ -42,121 +41,119 @@ const CreatePilotProfileForm = (props) => {
   };
 
   return (
-    <Card>
-      <form className="m-5" onSubmit={submitHandler}>
-        <div>
-          <label className="mb-2 block font-bold" htmlFor="name">
-            Name:
-          </label>
-          <input
-            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
-            type="text"
-            required
-            id="name"
-            ref={nameInputRef}
-          ></input>
-        </div>
-        <div>
-          <label className="mb-2 block font-bold " htmlFor="surname">
-            Surname:
-          </label>
-          <input
-            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
-            type="text"
-            required
-            id="surname"
-            ref={surnameInputRef}
-          ></input>
-        </div>
-        <div>
-          <label className="mb-2 block font-bold " htmlFor="nickname">
-            Nickname:
-          </label>
-          <input
-            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
-            type="text"
-            required
-            id="nickname"
-            ref={nicknameInputRef}
-          ></input>
-        </div>
-        <div>
-          <label className="mb-2 block font-bold " htmlFor="location">
-            Location:
-          </label>
-          <input
-            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
-            type="text"
-            required
-            id="location"
-            ref={locationInputRef}
-          ></input>
-        </div>
-        <div>
-          <label className="mb-2 block font-bold " htmlFor="email">
-            Enter your email address:
-          </label>
-          <input
-            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
-            type="email"
-            required
-            id="email"
-            ref={emailInputRef}
-          ></input>
-        </div>
-        <div>
-          <label className="mb-2 block font-bold " htmlFor="instagram">
-            Instagram profile:
-          </label>
-          <input
-            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
-            type="url"
-            required
-            id="instagram"
-            ref={instagramInputRef}
-          ></input>
-        </div>
-        <div>
-          <label className="mb-2 block font-bold " htmlFor="youtube">
-            Youtube channel:
-          </label>
-          <input
-            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
-            type="url"
-            required
-            id="youtube"
-            ref={youtubeInputRef}
-          ></input>
-        </div>
-        <div>
-          <label className="mb-2 block font-bold " htmlFor="video">
-            Youtube video you want people to see
-          </label>
-          <input
-            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
-            type="url"
-            required
-            id="video"
-            ref={videoInputRef}
-          ></input>
-        </div>
-        <div>
-          <label className="mb-2 block font-bold " htmlFor="photo">
-            Your photo
-          </label>
-          <input
-            className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
-            type="url"
-            required
-            id="photo"
-            ref={photoInputRef}
-          ></input>
-        </div>
-        <Button>
-          <button>Add a pilot</button>
-        </Button>
-      </form>
-    </Card>
+    <form className="m-5" onSubmit={submitHandler}>
+      <div>
+        <label className="mb-2 block font-bold" htmlFor="name">
+          Name:
+        </label>
+        <input
+          className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
+          type="text"
+          required
+          id="name"
+          ref={nameInputRef}
+        ></input>
+      </div>
+      <div>
+        <label className="mb-2 block font-bold " htmlFor="surname">
+          Surname:
+        </label>
+        <input
+          className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
+          type="text"
+          required
+          id="surname"
+          ref={surnameInputRef}
+        ></input>
+      </div>
+      <div>
+        <label className="mb-2 block font-bold " htmlFor="nickname">
+          Nickname:
+        </label>
+        <input
+          className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
+          type="text"
+          required
+          id="nickname"
+          ref={nicknameInputRef}
+        ></input>
+      </div>
+      <div>
+        <label className="mb-2 block font-bold " htmlFor="location">
+          Location:
+        </label>
+        <input
+          className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
+          type="text"
+          required
+          id="location"
+          ref={locationInputRef}
+        ></input>
+      </div>
+      <div>
+        <label className="mb-2 block font-bold " htmlFor="email">
+          Enter your email address:
+        </label>
+        <input
+          className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
+          type="email"
+          required
+          id="email"
+          ref={emailInputRef}
+        ></input>
+      </div>
+      <div>
+        <label className="mb-2 block font-bold " htmlFor="instagram">
+          Instagram profile:
+        </label>
+        <input
+          className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
+          type="url"
+          required
+          id="instagram"
+          ref={instagramInputRef}
+        ></input>
+      </div>
+      <div>
+        <label className="mb-2 block font-bold " htmlFor="youtube">
+          Youtube channel:
+        </label>
+        <input
+          className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
+          type="url"
+          required
+          id="youtube"
+          ref={youtubeInputRef}
+        ></input>
+      </div>
+      <div>
+        <label className="mb-2 block font-bold " htmlFor="video">
+          Youtube video you want people to see
+        </label>
+        <input
+          className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
+          type="url"
+          required
+          id="video"
+          ref={videoInputRef}
+        ></input>
+      </div>
+      <div>
+        <label className="mb-2 block font-bold " htmlFor="photo">
+          Your photo
+        </label>
+        <input
+          className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-mainbg shadow focus:outline-none"
+          type="url"
+          required
+          id="photo"
+          ref={photoInputRef}
+        ></input>
+      </div>
+      <Button>
+        <button>Add a pilot</button>
+      </Button>
+    </form>
   );
 };
 
