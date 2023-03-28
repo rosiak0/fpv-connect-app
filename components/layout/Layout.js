@@ -5,7 +5,7 @@ const Layout = (props) => {
     <>
       <div className="bg-mainbg">
         <MainNavigation />
-        <main>{props.children}</main>
+        <main className="mt-24">{props.children}</main>
       </div>
     </>
   );

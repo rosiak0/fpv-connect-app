@@ -2,10 +2,9 @@ import Link from "next/link";
 
 const MainNavigation = () => {
   return (
-    <header className="mb-20 w-full bg-navyblue p-4 text-lg shadow-lg">
+    <header className="fixed top-0 z-10 w-full bg-navyblue p-4 text-lg shadow-lg">
       {/* LOGO!!  */}
       <div className="m-auto flex w-3/5 justify-between">
-        {" "}
         <Link className="text-yellow" href="/">
           FPV CONNECT
         </Link>
