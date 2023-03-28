@@ -48,11 +48,6 @@ const FindPilots = (props) => {
         />
       </Head>
       <Content>
-        {/* <img
-          className="absolute z-10 h-auto w-full overflow-hidden "
-          src="./pilot.jpg"
-          alt="Picture of an fpv pilot wearing DJI goggles"
-        /> */}
         <main className="">
           <h1 className="pb-10 text-4xl">
             GREAT PRODUCTIONS START WITH GREAT CREWS.
