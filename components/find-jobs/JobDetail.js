@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Button from "../ui/Button";
 import Card from "../ui/Card";
-import Content from "../ui/Content";
 
 const JobDetail = (props) => {
   return (

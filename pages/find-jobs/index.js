@@ -47,8 +47,8 @@ const FindJobs = (props) => {
       </Head>
       <Content>
         <main className="">
-          <h1 className="pb-10 text-3xl">TAKE THE WORK OUT OF FINDING WORK.</h1>
-          <p className="pb-10">
+          <h1 className="pb-10 text-4xl">TAKE THE WORK OUT OF FINDING WORK.</h1>
+          <p className=" pb-20 text-lg">
             We take the hassle out of job searching. Find work in film and video
             production that meets your unique skill-set, anywhere at any time.
           </p>

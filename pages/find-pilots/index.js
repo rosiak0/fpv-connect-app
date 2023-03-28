@@ -54,7 +54,13 @@ const FindPilots = (props) => {
           alt="Picture of an fpv pilot wearing DJI goggles"
         /> */}
         <main className="">
-          <h1 className="">Find FPV Pilots</h1>
+          <h1 className="pb-10 text-4xl">
+            GREAT PRODUCTIONS START WITH GREAT CREWS.
+          </h1>
+          <p className="tex-lg pb-20">
+            Whether you need an operator for a day, a month or a full-time FPV
+            pilot for your project, we're here to help you out.
+          </p>
           <div className="flex justify-center">
             <Button>
               <button onClick={displayPilotsHandler}>Browse pilots</button>
