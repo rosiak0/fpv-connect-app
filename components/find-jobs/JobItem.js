@@ -22,7 +22,9 @@ function JobItem(props) {
         </div>
         <div>
           <ListButton>
-            <button onClick={showDetailsHandler}>Show Details</button>
+            <button className="w-full" onClick={showDetailsHandler}>
+              Show Details
+            </button>
           </ListButton>
         </div>
       </ListCard>

@@ -20,7 +20,7 @@ const JobDetail = (props) => {
           </div>
         </Button>
         <Button>
-          <button>
+          <button className="w-full">
             <Link href="/find-jobs">Return</Link>
           </button>
         </Button>

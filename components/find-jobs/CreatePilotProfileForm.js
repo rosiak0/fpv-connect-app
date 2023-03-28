@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import Button from "../ui/Button";
+import ListButton from "../ui/ListButton";
 
 const CreatePilotProfileForm = (props) => {
   const nameInputRef = useRef();
@@ -150,9 +150,11 @@ const CreatePilotProfileForm = (props) => {
           ref={photoInputRef}
         ></input>
       </div>
-      <Button>
-        <button>Add a pilot</button>
-      </Button>
+      <div className="flex justify-center">
+        <ListButton>
+          <button className="w-full">Add a pilot</button>
+        </ListButton>
+      </div>
     </form>
   );
 };

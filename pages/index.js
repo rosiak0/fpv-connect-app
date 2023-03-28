@@ -32,7 +32,7 @@ export default function Home() {
           <div className="flex flex-wrap justify-center ">
             <div>
               <ButtonLarge>
-                <button>
+                <button className="w-full">
                   <Link href="/find-pilots">
                     <h4>FIND PILOTS</h4>
                   </Link>
@@ -42,7 +42,7 @@ export default function Home() {
             </div>
             <div>
               <ButtonLarge>
-                <button>
+                <button className="w-full">
                   <Link href="/find-jobs">
                     <h4>FIND JOBS </h4>
                   </Link>

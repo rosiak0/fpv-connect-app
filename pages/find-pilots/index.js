@@ -63,10 +63,14 @@ const FindPilots = (props) => {
           </p>
           <div className="flex justify-center">
             <Button>
-              <button onClick={displayPilotsHandler}>Browse pilots</button>
+              <button className="w-full" onClick={displayPilotsHandler}>
+                Browse pilots
+              </button>
             </Button>
             <Button>
-              <button onClick={postJobHandler}>Post a job</button>
+              <button className="w-full" onClick={postJobHandler}>
+                Post a job
+              </button>
             </Button>
           </div>
           <div>{displayContent}</div>

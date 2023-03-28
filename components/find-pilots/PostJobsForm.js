@@ -1,5 +1,6 @@
 import { useRef } from "react";
-import Button from "../ui/Button";
+
+import ListButton from "../ui/ListButton";
 
 const PostJobsForm = (props) => {
   const titleInputRef = useRef();
@@ -95,9 +96,11 @@ const PostJobsForm = (props) => {
           ref={emailInputRef}
         ></input>
       </div>
-      <Button>
-        <button>Post a job</button>
-      </Button>
+      <div className="flex">
+        <ListButton>
+          <button className="w-full">Post a job</button>
+        </ListButton>
+      </div>
     </form>
   );
 };

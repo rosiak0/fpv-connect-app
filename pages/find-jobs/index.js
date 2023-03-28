@@ -54,10 +54,14 @@ const FindJobs = (props) => {
           </p>
           <div className="flex justify-center">
             <Button>
-              <button onClick={displayJobsHandler}>Browse jobs</button>
+              <button className="w-full" onClick={displayJobsHandler}>
+                Browse jobs
+              </button>
             </Button>
             <Button>
-              <button onClick={createProfileHandler}>Create a profile</button>
+              <button className="w-full" onClick={createProfileHandler}>
+                Create a profile
+              </button>
             </Button>
           </div>
           <div>{displayContent}</div>

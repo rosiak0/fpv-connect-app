@@ -43,7 +43,7 @@ const PilotDetail = (props) => {
             </div>
           </div>
           <Button>
-            <button>
+            <button className="w-full">
               <Link href="/find-pilots">Return</Link>
             </button>
           </Button>
