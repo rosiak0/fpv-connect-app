@@ -33,12 +33,14 @@ const PilotDetail = (props) => {
             >
               Youtube
             </a>
-            <a
-              href={`mailto: ${props.email}`}
-              className="mx-2 hover:scale-105 hover:shadow-xl"
-            >
-              Send Email
-            </a>
+            <div className="text-center">
+              <a
+                href={`mailto: ${props.email}`}
+                className="mx-2 hover:scale-105 hover:shadow-xl"
+              >
+                Send Email
+              </a>
+            </div>
           </div>
           <Button>
             <button>
