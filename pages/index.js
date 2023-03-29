@@ -18,11 +18,11 @@ export default function Home() {
         </video>
       </div>
       <div className="relative z-10 flex max-h-screen w-full overflow-hidden rounded-lg text-lg text-yellow shadow-lg lg:m-auto lg:w-3/5 lg:border-2">
-        <main className="z-10 mx-auto px-10 pb-20 lg:pt-56">
-          <h1 className="pb-10 text-5xl">
+        <main className="z-10 mx-auto px-10 pb-20 sm:pt-12 lg:pt-40">
+          <h1 className="pb-10 text-4xl sm:text-5xl md:pb-14">
             YOUR FILM AND VIDEO PRODUCTION PARTNER
           </h1>
-          <p className="pb-16 text-lg lg:pb-72">
+          <p className="pb-10 text-lg sm:pb-20 md:pb-36 lg:pb-40">
             We make it easy to find and hire qualified FPV drone pilots for
             film, video and live event realization
           </p>

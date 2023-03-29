@@ -56,7 +56,7 @@ const FindPilots = (props) => {
             Whether you need an operator for a day, a month or a full-time FPV
             pilot for your project, we&apos;re here to help you out.
           </p>
-          <div className="flex justify-center">
+          <div className="flex flex-wrap justify-center">
             <Button>
               <button className="w-full" onClick={displayPilotsHandler}>
                 Browse pilots

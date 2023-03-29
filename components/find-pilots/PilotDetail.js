@@ -5,7 +5,7 @@ import Card from "../ui/Card";
 const PilotDetail = (props) => {
   return (
     <Card>
-      <div className="flex">
+      <div className="flex flex-wrap">
         <iframe
           className="aspect-video"
           width="1080px"

@@ -52,7 +52,7 @@ const FindJobs = (props) => {
             We take the hassle out of job searching. Find work in film and video
             production that meets your unique skill-set, anywhere at any time.
           </p>
-          <div className="flex justify-center">
+          <div className="flex flex-wrap justify-center">
             <Button>
               <button className="w-full" onClick={displayJobsHandler}>
                 Browse jobs
@@ -67,7 +67,6 @@ const FindJobs = (props) => {
           <div>{displayContent}</div>
         </main>
       </Content>
-
     </>
   );
 };
