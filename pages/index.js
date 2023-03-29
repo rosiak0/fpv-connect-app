@@ -12,12 +12,12 @@ export default function Home() {
           content="Find the fpv pilot you need for your next project!"
         />
       </Head>
-      <div className="absolute top-0 right-0 z-0 h-screen w-full overflow-hidden">
+      <div className="absolute top-10 right-0 z-0 h-screen w-full overflow-hidden">
         <video autoPlay loop muted className="w-full">
           <source src="./videoBg.mp4" type="video/mp4" />
         </video>
       </div>
-      <div className="relative z-10 m-5 flex max-h-screen w-full overflow-hidden rounded-lg text-lg text-yellow shadow-lg lg:m-auto lg:w-3/5 lg:border-2">
+      <div className="relative z-10 flex max-h-screen w-full overflow-hidden rounded-lg text-lg text-yellow shadow-lg lg:m-auto lg:w-3/5 lg:border-2">
         <main className="z-10 mx-auto px-10 pb-20 lg:pt-56">
           <h1 className="pb-10 text-5xl">
             YOUR FILM AND VIDEO PRODUCTION PARTNER
