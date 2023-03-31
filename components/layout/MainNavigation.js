@@ -1,45 +1,78 @@
 import Link from "next/link";
+import { useState } from "react";
 
 const MainNavigation = () => {
-  return (
-    <header className="fixed top-0 z-30 w-full bg-navyblue p-4 text-lg shadow-lg">
-      {/* LOGO!!  */}
-      <div className="m-auto flex w-full justify-between px-6 lg:w-3/5 lg:px-0">
-        <Link className="text-yellow" href="/">
-          FPV CONNECT
-        </Link>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="rgb(253 201 73)"
-          className="h-7 w-7 md:hidden"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-          />
-        </svg>
+  const [showNavLinks, setShowNavLinks] = useState(false);
 
-        <nav className="hidden md:block">
-          <ul className="flex justify-start">
-            <li className="mx-3 text-yellow">
-              <Link href="/find-pilots">Find Pilots</Link>
-            </li>
-            <li className="mx-3 text-yellow">
-              <Link href="/find-jobs">Find Jobs</Link>
-            </li>
-            <li className="mx-3 text-yellow">
-              <Link href="">SIGN IN</Link>
-            </li>
-            <li className="ml-3 text-yellow">
-              <Link href="">JOIN</Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
+  const showNavHandler = () => {
+    setShowNavLinks(!showNavLinks);
+  };
+
+  return (
+    <header className="fixed top-0 z-30 w-full bg-navyblue text-lg shadow lg:px-0">
+      <nav className="m-auto flex w-full flex-wrap justify-between p-4 px-9  lg:w-3/5 lg:px-0 ">
+        <div className="w-1/2 md:w-1/3">
+          {/* <header className="fixed top-0 z-30 w-full bg-navyblue p-4 text-lg shadow-lg">
+      <nav>
+        <div className="m-auto flex w-full justify-between px-6 lg:w-3/5 lg:px-0"> */}
+          <Link className="text-yellow" href="/">
+            FPV CONNECT
+          </Link>
+        </div>
+        <div className="w-2/2">
+          <button
+            onClick={showNavHandler}
+            // type="button"
+            class="text-md inline-flex items-center rounded-sm  hover:scale-105 focus:outline-none focus:ring-1 focus:ring-highlight md:hidden"
+            // aria-expanded={showNavLinks}
+          >
+            <span className="sr-only">Open main menu</span>
+            <svg
+              // aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="rgb(253 201 73)"
+              className="h-6 w-6 md:hidden"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+        {/* LINKS */}
+        <div
+          className={`${
+            showNavLinks ? "block" : "hidden"
+          }  w-full md:block md:w-auto`}
+          id="navbar-default"
+        >
+          <div className="flex flex-col md:mx-auto md:flex-row">
+            <ul
+              className={
+                showNavLinks ? "flex flex-col text-center" : "hidden md:flex"
+              }
+            >
+              <li className="mx-3 text-yellow">
+                <Link href="/find-pilots">Find Pilots</Link>
+              </li>
+              <li className="mx-3 text-yellow">
+                <Link href="/find-jobs">Find Jobs</Link>
+              </li>
+              <li className="mx-3 text-yellow">
+                <Link href="">SIGN IN</Link>
+              </li>
+              <li className="ml-3 text-yellow">
+                <Link href="">JOIN</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
   );
 };
