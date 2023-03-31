@@ -12,7 +12,7 @@ export default function Home() {
           content="Find the fpv pilot you need for your next project!"
         />
       </Head>
-      <div className="absolute top-10 right-0 z-0 h-screen w-full overflow-hidden">
+      <div className="absolute top-0 right-0 z-0 h-screen w-full overflow-hidden">
         <video
           autoPlay
           loop
