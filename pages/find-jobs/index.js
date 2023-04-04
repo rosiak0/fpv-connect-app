@@ -2,6 +2,7 @@
 import { MongoClient } from "mongodb";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useSession, signIn } from "next-auth/react";
 import Head from "next/head";
 
 import JobsList from "../../components/find-jobs/JobsList";
@@ -11,6 +12,8 @@ import Button from "../../components/ui/Button";
 import Content from "../../components/ui/Content";
 
 const FindJobs = (props) => {
+  const { data: session } = useSession();
+
   const router = useRouter();
   const [displayContent, setDisplayContent] = useState(null);
 
@@ -58,11 +61,19 @@ const FindJobs = (props) => {
                 Browse jobs
               </button>
             </Button>
-            <Button>
-              <button className="w-full" onClick={createProfileHandler}>
-                Create a profile
-              </button>
-            </Button>
+            {session ? (
+              <Button>
+                <button className="w-full" onClick={createProfileHandler}>
+                  Create a profile
+                </button>
+              </Button>
+            ) : (
+              <Button>
+                <button className="w-full" onClick={() => signIn()}>
+                  Login to create a profile
+                </button>
+              </Button>
+            )}
           </div>
           <div>{displayContent}</div>
         </main>

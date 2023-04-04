@@ -1,21 +1,30 @@
 import Link from "next/link";
-import { useState } from "react";
+
+import AppContext from "../../context/AppContext";
+
+import { useSession, signOut } from "next-auth/react";
+
+import { useContext } from "react";
 
 const MainNavigation = () => {
-  const [showNavLinks, setShowNavLinks] = useState(false);
+  const { data: session } = useSession();
+
+  const context = useContext(AppContext);
 
   const showNavHandler = () => {
-    setShowNavLinks(!showNavLinks);
+    context.setShowNavLinks(!context.showNavLinks);
   };
-
+  const hideNavHandler = () => {
+    context.setShowNavLinks(false);
+  };
   return (
-    <header className="fixed top-0 z-30 w-full bg-navyblue text-lg shadow lg:px-0">
+    <header className="fixed top-0 z-30 w-full bg-navyblue text-lg shadow-lg lg:px-0">
       <nav className="m-auto flex w-full flex-wrap justify-between p-4 px-9  lg:w-3/5 lg:px-0 ">
         <div className="w-1/2 md:w-1/3">
           {/* <header className="fixed top-0 z-30 w-full bg-navyblue p-4 text-lg shadow-lg">
       <nav>
         <div className="m-auto flex w-full justify-between px-6 lg:w-3/5 lg:px-0"> */}
-          <Link className="text-yellow" href="/">
+          <Link onClick={hideNavHandler} className="text-yellow" href="/">
             FPV CONNECT
           </Link>
         </div>
@@ -47,28 +56,44 @@ const MainNavigation = () => {
         {/* LINKS */}
         <div
           className={`${
-            showNavLinks ? "block" : "hidden"
+            context.showNavLinks ? "block" : "hidden"
           }  w-full md:block md:w-auto`}
           id="navbar-default"
         >
           <div className="flex flex-col md:mx-auto md:flex-row">
             <ul
               className={
-                showNavLinks ? "flex flex-col text-center" : "hidden md:flex"
+                context.showNavLinks
+                  ? "flex flex-col text-center"
+                  : "hidden md:flex"
               }
             >
-              <li className="mx-3 text-yellow">
+              <li onClick={hideNavHandler} className="mx-3 text-yellow">
                 <Link href="/find-pilots">Find Pilots</Link>
               </li>
-              <li className="mx-3 text-yellow">
+              <li onClick={hideNavHandler} className="mx-3 text-yellow">
                 <Link href="/find-jobs">Find Jobs</Link>
               </li>
-              <li className="mx-3 text-yellow">
-                <Link href="">SIGN IN</Link>
-              </li>
-              <li className="ml-3 text-yellow">
-                <Link href="">JOIN</Link>
-              </li>
+              {session && (
+                <li onClick={hideNavHandler} className="ml-3 text-yellow">
+                  <Link href="/account">Account</Link>
+                </li>
+              )}
+              {session ? (
+                <li onClick={hideNavHandler} className="mx-3 text-yellow">
+                  <button
+                    onClick={() => {
+                      return signOut();
+                    }}
+                  >
+                    Log out
+                  </button>
+                </li>
+              ) : (
+                <li onClick={hideNavHandler} className="mx-3 text-yellow">
+                  <Link href="/login">Log in</Link>
+                </li>
+              )}
             </ul>
           </div>
         </div>
