@@ -68,19 +68,31 @@ const MainNavigation = () => {
                   : "hidden md:flex"
               }
             >
-              <li onClick={hideNavHandler} className="mx-3 text-yellow">
+              <li
+                onClick={hideNavHandler}
+                className="mx-3 text-yellow duration-200 hover:text-highlight"
+              >
                 <Link href="/find-pilots">Find Pilots</Link>
               </li>
-              <li onClick={hideNavHandler} className="mx-3 text-yellow">
+              <li
+                onClick={hideNavHandler}
+                className="mx-3 text-yellow duration-200 hover:text-highlight "
+              >
                 <Link href="/find-jobs">Find Jobs</Link>
               </li>
               {session && (
-                <li onClick={hideNavHandler} className="ml-3 text-yellow">
+                <li
+                  onClick={hideNavHandler}
+                  className="ml-3 text-yellow duration-200 hover:text-highlight "
+                >
                   <Link href="/account">Account</Link>
                 </li>
               )}
               {session ? (
-                <li onClick={hideNavHandler} className="mx-3 text-yellow">
+                <li
+                  onClick={hideNavHandler}
+                  className="mx-3 text-yellow  duration-200 hover:text-highlight "
+                >
                   <button
                     onClick={() => {
                       return signOut();
@@ -90,7 +102,10 @@ const MainNavigation = () => {
                   </button>
                 </li>
               ) : (
-                <li onClick={hideNavHandler} className="mx-3 text-yellow">
+                <li
+                  onClick={hideNavHandler}
+                  className="mx-3 text-yellow duration-200 hover:text-highlight "
+                >
                   <Link href="/login">Log in</Link>
                 </li>
               )}
