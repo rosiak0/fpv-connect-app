@@ -7,35 +7,35 @@ import Button from "../components/ui/Button";
 const Login = () => {
   const { data: session } = useSession();
 
-  if (session) {
-    return (
-      <Content>
+  return (
+    <Content>
+      {session ? (
         <div>
-          <p>Welcome, {session.user.name}</p>
-          <Button>
-            <button
-              onClick={() => {
-                return signOut();
-              }}
-            >
-              Sign out
-            </button>
-          </Button>
+          <p className="text-center">Welcome, {session.user.name}</p>
+          <div className="flex justify-center">
+            <Button>
+              <button
+                onClick={() => {
+                  return signOut();
+                }}
+              >
+                Sign out
+              </button>
+            </Button>
+          </div>
         </div>
-      </Content>
-    );
-  } else {
-    return (
-      <Content>
+      ) : (
         <div>
-          <p>You are not signed in</p>
-          <Button>
-            <button onClick={() => signIn()}>Sign in</button>
-          </Button>
+          <p className="text-center">You are not signed in</p>
+          <div className="flex justify-center">
+            <Button>
+              <button onClick={() => signIn()}>Sign in</button>
+            </Button>
+          </div>
         </div>
-      </Content>
-    );
-  }
+      )}
+    </Content>
+  );
 };
 
 export default Login;
